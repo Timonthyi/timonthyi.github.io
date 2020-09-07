@@ -161,6 +161,85 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/cute.jpeg">
+      <meta itemprop="name" content="博主">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EHui's blogs">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/09/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="post-title-link" itemprop="url">数据结构</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建于：2020-09-07 23:13:47" itemprop="dateCreated datePublished" datetime="2020-09-07T23:13:47+00:00">2020-09-07</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/With-Python/" itemprop="url" rel="index"><span itemprop="name">With Python</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Sequence"><a href="#Sequence" class="headerlink" title="Sequence"></a>Sequence</h1><p>序列，按添加元素的先后顺序保存。具有index属性（即可以通过index来遍历）。</p>
+<p>slice符，x:y（from index x to index y），x、y可负，负数从后记起。 </p>
+<h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><p>可理解为动态数组，元素类型不限。可排序即调用<code>sort()</code>方法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义list</span></span><br><span class="line">fruit = [<span class="string">'banana'</span>, <span class="string">'apple'</span>, <span class="string">'pear'</span>]</span><br><span class="line"><span class="comment"># 添加元素（可任意对象）</span></span><br><span class="line">fruit.append(<span class="string">'hami melon'</span>)</span><br><span class="line"><span class="comment"># 删除元素</span></span><br><span class="line"><span class="keyword">del</span> fruit[index]</span><br></pre></td></tr></table></figure>
+
+<h2 id="Tuple"><a href="#Tuple" class="headerlink" title="Tuple"></a>Tuple</h2><p>特点是immutable（不可修改的）。元素可任意，甚至可以嵌套。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义Tuple</span></span><br><span class="line">fruit = (<span class="string">'banana'</span>, <span class="string">'apple'</span>, <span class="string">'pear'</span>)</span><br><span class="line"><span class="comment"># 定义一个元素的Tuple时</span></span><br><span class="line">fruit = (<span class="string">'banana'</span>, )</span><br></pre></td></tr></table></figure>
+
+<h2 id="Dictionary"><a href="#Dictionary" class="headerlink" title="Dictionary"></a>Dictionary</h2><p>存储键值对的数据。key值必须为immutable（不可修改的）。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义</span></span><br><span class="line">ab = &#123;</span><br><span class="line">    <span class="string">'swaroop'</span> : <span class="string">'swaroop@swaroopch.com'</span></span><br><span class="line">    <span class="string">'Larry'</span> : <span class="string">'larry@wall.org'</span></span><br><span class="line">    <span class="string">'Matsumoto'</span> : <span class="string">'matz@ruby-lang.org'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment"># 遍历</span></span><br><span class="line"><span class="keyword">for</span> name, addr <span class="keyword">in</span> ab.items():</span><br><span class="line">    print(name, addr)</span><br><span class="line"><span class="comment"># 添加</span></span><br><span class="line">ab[<span class="string">'Guido'</span>] = <span class="string">'guido@python.org'</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h1><p>无序的。仅此而已。提供了in表达式，<code>remove()</code>，位运算等方法。</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p>在python中变量名和实际存储变量的地址绑定的。仅仅通过变量名赋值，没有复制实际的地址空间。而要通过相应的方式或者使用slice符号复制。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/06/%E9%9B%B6%E7%A2%8E/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -831,77 +910,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/03/%E5%AE%9E%E8%AE%AD%E6%97%A5%E8%AE%B0-%E5%8C%86%E5%BF%99/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/cute.jpeg">
-      <meta itemprop="name" content="博主">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="EHui's blogs">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/03/%E5%AE%9E%E8%AE%AD%E6%97%A5%E8%AE%B0-%E5%8C%86%E5%BF%99/" class="post-title-link" itemprop="url">实训日记-匆忙</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建于：2020-08-03 23:11:01" itemprop="dateCreated datePublished" datetime="2020-08-03T23:11:01+00:00">2020-08-03</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AE%9E%E8%AE%AD%E6%97%A5%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">实训日记</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="仿佛伊始"><a href="#仿佛伊始" class="headerlink" title="仿佛伊始"></a>仿佛伊始</h1><p>项目开发本身可能确实不难，但是可能难在团队协作上。现在的状况就是打算用别人提供的模板了，差不多修修改改，在他们的基础上寻求创新。这次实训可能水成了。我的大学生涯太多太多水了，重要的锻炼实践能力的课设水了整整三个学期，支教没有达到实际目标。可能项目经历几乎为0，所以不能水下去了，必须正式地去学习，去把项目做好，为什么总是在最后时刻才醒悟…</p>
-<h1 id="回到项目"><a href="#回到项目" class="headerlink" title="回到项目"></a>回到项目</h1><p>做好一个项目，难就难在日复一日学习的坚持，还有最最重要的实践。可以说学习任何东西，实践是基础。既然已经懂得了这个道理，那就不难完成一个项目。然而现状就是这样，这个项目有点紧急。几乎从0开始，3天时间，极限。所以时间多回归在项目上，尽量减少在娱乐上所花的时间。</p>
-<h1 id="严谨"><a href="#严谨" class="headerlink" title="严谨"></a>严谨</h1><p>今天和宇滨的交流就表现得很不理智、考虑不周全。因为没有实现去了解所需的数据的类型和格式。导致一个下午的爬虫爬取了无效的数据。所以无论什么事，遇到了要处理，就一定停下来，带着头脑去思考，而不是一味地迁就，一味地去最低限度去接受。而是要以最高姿态要求自己。</p>
-<h1 id="意志"><a href="#意志" class="headerlink" title="意志"></a>意志</h1><p>意志力还是要加强，最近表现得还不错。我就是我自己的神在我活的地方。</p>
-<p><strong>我和我骄傲的倔强</strong>！</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -973,7 +981,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-count">23</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -986,7 +994,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
