@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.1">
+<meta name="generator" content="Hexo 5.1.1">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -17,21 +17,22 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="平凡一天上午需求答辩，其他时间没干什么。下午打了CSGO，认识了新朋友，看了一下机器学习算法。晚上把Jira项目Sprint分配完，看了看毫无头绪的机器学习算法，打了一把CSGO。有点自暴自弃。 瓶颈瓶颈就在于不太懂怎么去实现智能拼接、预测未来、用户推荐的大数据需求。网上也找了资料，但是没有找到相应的实例。说实话全靠看官方的英文文档去选择算法，有点难度。或许找相同的例子是最快的办法。所以心情有点不">
 <meta property="og:type" content="article">
 <meta property="og:title" content="实训日记-瓶颈">
-<meta property="og:url" content="http://yoursite.com/2020/07/30/%E5%AE%9E%E8%AE%AD%E6%97%A5%E8%AE%B0-%E7%93%B6%E9%A2%88/index.html">
+<meta property="og:url" content="http://example.com/2020/07/30/%E5%AE%9E%E8%AE%AD%E6%97%A5%E8%AE%B0-%E7%93%B6%E9%A2%88/index.html">
 <meta property="og:site_name" content="EHui&#39;s blogs">
 <meta property="og:description" content="平凡一天上午需求答辩，其他时间没干什么。下午打了CSGO，认识了新朋友，看了一下机器学习算法。晚上把Jira项目Sprint分配完，看了看毫无头绪的机器学习算法，打了一把CSGO。有点自暴自弃。 瓶颈瓶颈就在于不太懂怎么去实现智能拼接、预测未来、用户推荐的大数据需求。网上也找了资料，但是没有找到相应的实例。说实话全靠看官方的英文文档去选择算法，有点难度。或许找相同的例子是最快的办法。所以心情有点不">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-30T21:41:01.000Z">
-<meta property="article:modified_time" content="2020-09-08T14:02:05.473Z">
+<meta property="article:modified_time" content="2020-09-08T15:05:58.657Z">
 <meta property="article:author" content="EHui">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/07/30/%E5%AE%9E%E8%AE%AD%E6%97%A5%E8%AE%B0-%E7%93%B6%E9%A2%88/">
+<link rel="canonical" href="http://example.com/2020/07/30/%E5%AE%9E%E8%AE%AD%E6%97%A5%E8%AE%B0-%E7%93%B6%E9%A2%88/">
 
 
 <script id="page-configurations">
@@ -40,7 +41,7 @@
     sidebar: "",
     isHome : false,
     isPost : true,
-    lang   : 'zh-Hans'
+    lang   : 'zh-CN'
   };
 </script>
 
@@ -84,7 +85,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="تشغيل شريط التصفح">
+    <div class="toggle" aria-label="切换导航栏">
       <span class="toggle-line toggle-line-first"></span>
       <span class="toggle-line toggle-line-middle"></span>
       <span class="toggle-line toggle-line-last"></span>
@@ -165,12 +166,12 @@
     
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/30/%E5%AE%9E%E8%AE%AD%E6%97%A5%E8%AE%B0-%E7%93%B6%E9%A2%88/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/07/30/%E5%AE%9E%E8%AE%AD%E6%97%A5%E8%AE%B0-%E7%93%B6%E9%A2%88/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/cute.jpeg">
-      <meta itemprop="name" content="博主">
+      <meta itemprop="name" content="EHui">
       <meta itemprop="description" content="sharing, recording and summary">
     </span>
 
@@ -189,8 +190,15 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建于：2020-07-30 21:41:01" itemprop="dateCreated datePublished" datetime="2020-07-30T21:41:01+00:00">2020-07-30</time>
+              <time title="创建时间：2020-07-30 21:41:01" itemprop="dateCreated datePublished" datetime="2020-07-30T21:41:01+00:00">2020-07-30</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-09-08 15:05:58" itemprop="dateModified" datetime="2020-09-08T15:05:58+00:00">2020-09-08</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -215,7 +223,7 @@
         <h1 id="平凡一天"><a href="#平凡一天" class="headerlink" title="平凡一天"></a>平凡一天</h1><p>上午需求答辩，其他时间没干什么。下午打了CSGO，认识了新朋友，看了一下机器学习算法。晚上把Jira项目Sprint分配完，看了看毫无头绪的机器学习算法，打了一把CSGO。有点自暴自弃。</p>
 <h1 id="瓶颈"><a href="#瓶颈" class="headerlink" title="瓶颈"></a>瓶颈</h1><p>瓶颈就在于不太懂怎么去实现智能拼接、预测未来、用户推荐的大数据需求。网上也找了资料，但是没有找到相应的实例。说实话全靠看官方的英文文档去选择算法，有点难度。或许找相同的例子是最快的办法。所以心情有点不是很好，毕竟还是希望自己做的事有思路，有径可寻。并且最快做完，心里才有底。</p>
 <h1 id="补充昨天"><a href="#补充昨天" class="headerlink" title="补充昨天"></a>补充昨天</h1><p>昨天跑了一下电影评分的程序，还是挺有成就感的。毕竟距离完成目标又迈进了一步。下面是程序运行的结果，相应的代码已经更新到GitHub上面了。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">+-------+------+---------+------+----------+</span><br><span class="line">|movieId|rating|timestamp|userId|prediction|</span><br><span class="line">+-------+------+---------+------+----------+</span><br><span class="line">|    148|   5.0|975620824|   673|   3.12071|</span><br><span class="line">|    148|   4.0|968708953|  3184|  1.241068|</span><br><span class="line">|    148|   4.0|974082717|  2507|  3.110377|</span><br><span class="line">|    463|   3.0|978271588|    26| 3.7545822|</span><br><span class="line">|    463|   1.0|974663178|  2051| 2.1562433|</span><br><span class="line">|    463|   2.0|974944938|  1069| 1.9728932|</span><br><span class="line">|    463|   3.0|973125221|  2777| 3.6184065|</span><br><span class="line">|    463|   4.0|964145344|  4613| 4.0004673|</span><br><span class="line">|    463|   3.0|976172772|   524|  2.435392|</span><br><span class="line">|    463|   4.0|966273626|  5996|  3.072479|</span><br><span class="line">|    471|   4.0|960976999|  5300|  4.246154|</span><br><span class="line">|    471|   5.0|975005467|  1395| 4.7353354|</span><br><span class="line">|    471|   5.0|959205286|  5614|  4.503165|</span><br><span class="line">|    471|   5.0|974711905|  1699| 4.0213737|</span><br><span class="line">|    471|   2.0|974700924|  1884| 3.4418344|</span><br><span class="line">|    471|   3.0|962906679|  4957| 3.8265078|</span><br><span class="line">|    471|   4.0|975934884|   588| 4.1491566|</span><br><span class="line">|    471|   4.0|978571083|    78| 3.6103861|</span><br><span class="line">|    471|   2.0|973971583|  2564|  3.277192|</span><br><span class="line">|    471|   3.0|960511063|  5367|  3.657614|</span><br><span class="line">+-------+------+---------+------+----------+</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">+-------+------+---------+------+----------+</span><br><span class="line">|movieId|rating|timestamp|userId|prediction|</span><br><span class="line">+-------+------+---------+------+----------+</span><br><span class="line">|    148|   5.0|975620824|   673|   3.12071|</span><br><span class="line">|    148|   4.0|968708953|  3184|  1.241068|</span><br><span class="line">|    148|   4.0|974082717|  2507|  3.110377|</span><br><span class="line">|    463|   3.0|978271588|    26| 3.7545822|</span><br><span class="line">|    463|   1.0|974663178|  2051| 2.1562433|</span><br><span class="line">|    463|   2.0|974944938|  1069| 1.9728932|</span><br><span class="line">|    463|   3.0|973125221|  2777| 3.6184065|</span><br><span class="line">|    463|   4.0|964145344|  4613| 4.0004673|</span><br><span class="line">|    463|   3.0|976172772|   524|  2.435392|</span><br><span class="line">|    463|   4.0|966273626|  5996|  3.072479|</span><br><span class="line">|    471|   4.0|960976999|  5300|  4.246154|</span><br><span class="line">|    471|   5.0|975005467|  1395| 4.7353354|</span><br><span class="line">|    471|   5.0|959205286|  5614|  4.503165|</span><br><span class="line">|    471|   5.0|974711905|  1699| 4.0213737|</span><br><span class="line">|    471|   2.0|974700924|  1884| 3.4418344|</span><br><span class="line">|    471|   3.0|962906679|  4957| 3.8265078|</span><br><span class="line">|    471|   4.0|975934884|   588| 4.1491566|</span><br><span class="line">|    471|   4.0|978571083|    78| 3.6103861|</span><br><span class="line">|    471|   2.0|973971583|  2564|  3.277192|</span><br><span class="line">|    471|   3.0|960511063|  5367|  3.657614|</span><br><span class="line">+-------+------+---------+------+----------+</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
 
@@ -299,15 +307,15 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#平凡一天"><span class="nav-number">1.</span> <span class="nav-text">平凡一天</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#瓶颈"><span class="nav-number">2.</span> <span class="nav-text">瓶颈</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#补充昨天"><span class="nav-number">3.</span> <span class="nav-text">补充昨天</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B9%B3%E5%87%A1%E4%B8%80%E5%A4%A9"><span class="nav-number">1.</span> <span class="nav-text">平凡一天</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%93%B6%E9%A2%88"><span class="nav-number">2.</span> <span class="nav-text">瓶颈</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A1%A5%E5%85%85%E6%98%A8%E5%A4%A9"><span class="nav-number">3.</span> <span class="nav-text">补充昨天</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="博主"
+    <img class="site-author-image" itemprop="image" alt="EHui"
       src="/images/cute.jpeg">
-  <p class="site-author-name" itemprop="name">博主</p>
+  <p class="site-author-name" itemprop="name">EHui</p>
   <div class="site-description" itemprop="description">sharing, recording and summary</div>
 </div>
 <div class="site-state-wrap motion-element">
@@ -333,10 +341,6 @@
       </div>
   </nav>
 </div>
-  <div class="sidebar-button motion-element"><i class="fa fa-comment"></i>
-    Chat
-  </a>
-  </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
         <a href="https://github.com/Timonthyi" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Timonthyi" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
@@ -368,7 +372,7 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">博主</span>
+  <span class="author" itemprop="copyrightHolder">EHui</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
   </div>
