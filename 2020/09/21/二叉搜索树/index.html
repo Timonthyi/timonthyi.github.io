@@ -20,22 +20,22 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="子集问题描述问题描述：给定一个数组，求它的幂集。 例：[1,2] -&gt;[],[1],[2],[1,2] 解题思路看到这个题就想到了全排列的解法。即求数组给定元素的全排列然后进行“剪枝”，将冗余的解去除。">
+  <meta name="description" content="二叉搜索树二叉搜索树，Binary Search Tree。 定义：它要么是一颗空树，要么在其左子树不为空的情况下，左子树上所有结点的值均小于它的根节点的值，在其右子树不为空的情况下，右子树上所有节点的值均大于根结点。 特点：结点之间有大小顺序，有快速查找的优势。 问题描述将一个二叉搜索树变为累加树，即根节点等于其右子树所有结点的和，左节点等于根节点与右子树结点的和。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="子集">
-<meta property="og:url" content="http://example.com/2020/09/20/%E5%AD%90%E9%9B%86/index.html">
+<meta property="og:title" content="二叉搜索树">
+<meta property="og:url" content="http://example.com/2020/09/21/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/index.html">
 <meta property="og:site_name" content="EHui&#39;s blog">
-<meta property="og:description" content="子集问题描述问题描述：给定一个数组，求它的幂集。 例：[1,2] -&gt;[],[1],[2],[1,2] 解题思路看到这个题就想到了全排列的解法。即求数组给定元素的全排列然后进行“剪枝”，将冗余的解去除。">
+<meta property="og:description" content="二叉搜索树二叉搜索树，Binary Search Tree。 定义：它要么是一颗空树，要么在其左子树不为空的情况下，左子树上所有结点的值均小于它的根节点的值，在其右子树不为空的情况下，右子树上所有节点的值均大于根结点。 特点：结点之间有大小顺序，有快速查找的优势。 问题描述将一个二叉搜索树变为累加树，即根节点等于其右子树所有结点的和，左节点等于根节点与右子树结点的和。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-09-20T16:30:38.000Z">
+<meta property="article:published_time" content="2020-09-21T16:43:56.000Z">
 <meta property="article:modified_time" content="2020-09-21T09:16:53.112Z">
 <meta property="article:author" content="EHui">
+<meta property="article:tag" content="二叉搜索树">
 <meta property="article:tag" content="算法">
 <meta property="article:tag" content="备赛">
-<meta property="article:tag" content="回溯">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2020/09/20/%E5%AD%90%E9%9B%86/">
+<link rel="canonical" href="http://example.com/2020/09/21/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/">
 
 
 <script id="page-configurations">
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title>子集 | EHui's blog</title>
+  <title>二叉搜索树 | EHui's blog</title>
   
 
 
@@ -171,7 +171,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/20/%E5%AD%90%E9%9B%86/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/21/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/cute.jpeg">
@@ -184,7 +184,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          子集
+          二叉搜索树
         </h1>
 
         <div class="post-meta">
@@ -193,16 +193,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-09-20 16:30:38" itemprop="dateCreated datePublished" datetime="2020-09-20T16:30:38+00:00">2020-09-20</time>
+              <time title="创建时间：2020-09-21 16:43:56 / 修改时间：09:16:53" itemprop="dateCreated datePublished" datetime="2020-09-21T16:43:56+00:00">2020-09-21</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-09-21 09:16:53" itemprop="dateModified" datetime="2020-09-21T09:16:53+00:00">2020-09-21</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -214,7 +208,7 @@
             </span>
 
           
-            <span id="/2020/09/20/%E5%AD%90%E9%9B%86/" class="post-meta-item leancloud_visitors" data-flag-title="子集" title="阅读次数">
+            <span id="/2020/09/21/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/" class="post-meta-item leancloud_visitors" data-flag-title="二叉搜索树" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -229,8 +223,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/09/20/%E5%AD%90%E9%9B%86/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/09/20/%E5%AD%90%E9%9B%86/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/09/21/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/09/21/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -245,21 +239,27 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="子集"><a href="#子集" class="headerlink" title="子集"></a>子集</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>问题描述：给定一个数组，求它的幂集。</p>
-<p>例：[1,2] -&gt;[],[1],[2],[1,2]</p>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>看到这个题就想到了全排列的解法。即求数组给定元素的全排列然后进行“剪枝”，将冗余的解去除。</p>
+        <h1 id="二叉搜索树"><a href="#二叉搜索树" class="headerlink" title="二叉搜索树"></a>二叉搜索树</h1><p>二叉搜索树，<em>Binary Search Tree</em>。</p>
+<p>定义：它要么是一颗空树，要么在其左子树不为空的情况下，左子树上所有结点的值均小于它的根节点的值，在其右子树不为空的情况下，右子树上所有节点的值均大于根结点。</p>
+<p>特点：结点之间有大小顺序，有快速查找的优势。</p>
+<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>将一个二叉搜索树变为累加树，即根节点等于其右子树所有结点的和，左节点等于根节点与右子树结点的和。</p>
 <a id="more"></a>
 
-<p>官方题解：</p>
-<ul>
-<li><p>采用二进制数组标记元素是否包含。<br>比如：[1,2] -&gt;[] = 00,[1]=01,[2]=10,[1,2]=11<br>这样仅需每次将一个元素对应的位置置1就得到一个解。</p>
-</li>
-<li><p>递归（回溯），每个元素都有取和没有被取的状态。因此程序结构如下：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; t;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> cur, <span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(cur == n)</span><br><span class="line">        <span class="comment">//记录一个解</span></span><br><span class="line">    t.push_back(cur);	<span class="comment">//先取cur</span></span><br><span class="line">    dfs(cur+<span class="number">1</span>, n, k);</span><br><span class="line">    t.pop_back();	<span class="comment">//不取cur</span></span><br><span class="line">    dfs(cur+<span class="number">1</span>, n, k);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>例:</p>
+<div align=left>![bst](..\Images\bst.png)
 
-</li>
+<h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><h3 id="标准解法"><a href="#标准解法" class="headerlink" title="标准解法"></a>标准解法</h3><p>显然简单的解法就是中序遍历二叉搜索树。先遍历右节点其次根节点，最后左节点。</p>
+<h3 id="我的解法"><a href="#我的解法" class="headerlink" title="我的解法"></a>我的解法</h3><p>递归实现。依次处理左节点、右节点。</p>
+<p>代码模板为：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">recursive</span><span class="params">(TreeNode* p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(p-&gt;right)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(!isLeafNode(p-&gt;right))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//</span></span><br><span class="line">		&#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//</span></span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="comment">//</span></span><br><span class="line">    <span class="keyword">if</span>(p-&gt;left)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(isLeafNode(p-&gt;right))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="comment">//</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>不是不可以做出来，但是很复杂，很多种情况需要考虑。依赖了样例的数据。</p>
+<h1 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h1><ul>
+<li>一定要看清楚题目，理解题目意思。可以自己人脑运行一下样例。</li>
+<li>面对一种数据结构，比如二叉树，尽最大努力去利用它的特性。比如二叉搜索树的性质，很明显可以用中序遍历来解题。</li>
+<li>写完程序，进行分支检查。覆盖每一个if语句和else语句。毕竟比赛中没那么多样例程序给你跑。</li>
+<li>算法题还是吃一点经验的，所以多做还是有好处。</li>
 </ul>
-<h1 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h1><p>还是要多做，多总结。前天做的回溯，做了很久。但是熟悉了回溯算法。今天不到20min就做出来了。虽然解不是很优，走了弯路。这也反映了我做题的一个缺点，拿到题有一个解题思路就立马动手，而不是考虑一下最优解。这不太好。做提前养成思考多解的习惯。</p>
 
     </div>
 
@@ -269,9 +269,9 @@
 
       <footer class="post-footer">
           <div class="post-tags">
+              <a href="/tags/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/" rel="tag"># 二叉搜索树</a>
               <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"># 算法</a>
               <a href="/tags/%E5%A4%87%E8%B5%9B/" rel="tag"># 备赛</a>
-              <a href="/tags/%E5%9B%9E%E6%BA%AF/" rel="tag"># 回溯</a>
           </div>
 
         
@@ -280,13 +280,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/09/19/%E5%B7%A6%E5%8F%B6%E5%AD%90/" rel="prev" title="左叶子">
-      <i class="fa fa-chevron-left"></i> 左叶子
+    <a href="/2020/09/20/%E5%AD%90%E9%9B%86/" rel="prev" title="子集">
+      <i class="fa fa-chevron-left"></i> 子集
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/09/21/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/" rel="next" title="二叉搜索树">
-      二叉搜索树 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -346,7 +343,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%90%E9%9B%86"><span class="nav-number">1.</span> <span class="nav-text">子集</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF"><span class="nav-number">1.2.</span> <span class="nav-text">解题思路</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%9D%E8%80%83"><span class="nav-number">2.</span> <span class="nav-text">思考</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91"><span class="nav-number">1.</span> <span class="nav-text">二叉搜索树</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="nav-number">2.</span> <span class="nav-text">问题描述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%B3%95"><span class="nav-number">2.1.</span> <span class="nav-text">解法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%87%E5%87%86%E8%A7%A3%E6%B3%95"><span class="nav-number">2.1.1.</span> <span class="nav-text">标准解法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E8%A7%A3%E6%B3%95"><span class="nav-number">2.1.2.</span> <span class="nav-text">我的解法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%9D%E8%80%83"><span class="nav-number">3.</span> <span class="nav-text">思考</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
